@@ -1,6 +1,6 @@
 # React Native Android Location Service
 
-A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the background even the app is terminated.
+A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the background even the app is terminated.
 
 ## Installation
 
@@ -168,6 +168,7 @@ LocationService.start(option?);
 Start tracking device's location with specified options.
 
 **Parameters**
+
 | NAME | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | option | [Option](#Option) | No | Options for the Fused Location Provider API.
@@ -232,6 +233,7 @@ LocationService.start({
 Options for start location service.
 
 **Parameters**
+
 | NAME | TYPE | REQUIRED | DESCRIPTION | DEFAULT |
 | --- | --- | --- | --- | --- |
 | priority | [PriorityModeEnum](#PriorityModeEnum) | YES | Set the priority of the request. | `PRIORITY_BALANCED_POWER_ACCURACY` |

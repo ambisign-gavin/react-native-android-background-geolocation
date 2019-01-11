@@ -39,5 +39,11 @@ module.exports = {
             "always"
         ],
         'no-console': 'off',
+        'no-unused-vars': [
+            "error", 
+            { 
+                "args": "none" 
+            },
+        ]
     }
 };

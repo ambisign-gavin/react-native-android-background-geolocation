@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-location-service",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A react-native geolocation module for Android, which can run in the background even the app is terminated.",
   "main": "dist/index.js",
   "scripts": {

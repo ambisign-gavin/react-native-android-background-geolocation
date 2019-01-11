@@ -132,7 +132,7 @@ export default class App extends Component<{}> {
 
 ### Continuously run when the app is terminated
 
-The `react-native-android-location-service` will invoke your App in the background when the app is terminated. But that will not execute any react's components, which means that only execute your entry file, usually is `index.js`.
+The `react-native-android-location-service` will invoke your App in the background when the app is terminated. But that will not execute any react components, which means that only execute your entry file, usually is `index.js`.
 
 **index.js**
 
@@ -165,7 +165,7 @@ AppRegistry.registerComponent(appName, () => App);
 LocationService.start(option?);
 ```
 
-Start tracking device's location with specified options.
+Start tracking device location with specific options.
 
 **Parameters**
 
@@ -181,7 +181,7 @@ Start tracking device's location with specified options.
 LocationService.stop();
 ```
 
-Stop tracking device's location.
+Stop tracking device location.
 
 ---
 
@@ -230,14 +230,14 @@ LocationService.start({
 ...
 ```
 
-Options for start location service.
+Options for the location service.
 
 **Parameters**
 
 | NAME | TYPE | REQUIRED | DESCRIPTION | DEFAULT |
 | --- | --- | --- | --- | --- |
 | priority | [PriorityModeEnum](#PriorityModeEnum) | YES | Set the priority of the request. | `PRIORITY_BALANCED_POWER_ACCURACY` |
-| stopOnTerminate | boolean | NO | Whether this service is stop or not when the app is closed. | `false` |
+| stopOnTerminate | boolean | NO | Whether this service is stopped or not when the app is closed. | `false` |
 | interval | number | YES | The interval that can receive location information, in milliseconds. | 25000 ms |
 | fastestInterval | number | YES | The fastest interval that can receive location information, in milliseconds. | 20000 ms |
 | distanceFilter | number | YES | Set the minimum displacement between location updates in meters. | 100 m |
@@ -256,7 +256,7 @@ Options for start location service.
 }
 ```
 
-The location information is passed to the listener's argument.
+The location information is the argument be passed to the event listener.
 
 ---
 
@@ -270,9 +270,9 @@ The location information is passed to the listener's argument.
 }
 ```
 
-The error code and an error message are passed to the listener's argument.
+The error code and an error message are the arguments be passed to the event listener.
 
-*See more detail description at [errors section](#Errors).*
+*See more details of description at [errors section](#Errors).*
 
 ---
 
@@ -291,10 +291,10 @@ This enum offers the priority of the start option.
 
 | VALUE | DESCRIPTION |
 | --- | --- |
-| PRIORITY_BALANCED_POWER_ACCURACY | This will mixed-use GPS or wifi and cell towers to get a location.
+| PRIORITY_BALANCED_POWER_ACCURACY | This will mixed-use GPS or wifi and cell towers to get the location.
 | PRIORITY_HIGH_ACCURACY | This will use GPS to get the finest location available but use more power.
 | PRIORITY_LOW_POWER | This will use wifi or cell towers to get the location.
-| PRIORITY_NO_POWER | No locations will be returned unless a different client has requested location updates.
+| PRIORITY_NO_POWER | Your app does not trigger any location updates, but receives locations triggered by other apps.
 
 ---
 
@@ -303,9 +303,7 @@ This enum offers the priority of the start option.
 ```js
 import { ErrorCodeEnum } from 'react-native-android-location-service';
 ```
-
-This enum offers error codes that can easily distinguish the error by using it at `if` or `switch-case`.
-
+This enum offers error codes that can be used at `if` or `switch-case` to distinguish the error.
 
 | VALUE |
 | --- |
@@ -321,10 +319,10 @@ This enum offers error codes that can easily distinguish the error by using it a
 
 | CODE | ENUM VALUE | DESCRIPTION |
 | --- | --- | --- |
-| 40001 | PERMISSIONS_DENIED | Not have the permission to access a location service.
-| 40002 | PRIORITY_NOT_SUPPORTED | Use unsupported priority.
+| 40001 | PERMISSIONS_DENIED | No permissions to access a location service.
+| 40002 | PRIORITY_NOT_SUPPORTED | Use the unsupported priority.
 | 40003 | GOOGLE_PLAY_SERVICE_UPDATING | Google Play Services is updating. |
-| 40004 | GOOGLE_PLAY_SERVICE_NEED_UPDATE | Google Play Services' version is too low, needs to update. |
+| 40004 | GOOGLE_PLAY_SERVICE_NEED_UPDATE | Google Play Services version is too old, needs to update. |
 | 40005 | GOOGLE_PLAY_SERVICE_ERROR | Google Play Services is unavailable, please check is installed or not.
 
 ## License

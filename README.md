@@ -304,7 +304,8 @@ This enum offers the priority of the start option.
 import { ErrorCodeEnum } from 'react-native-android-location-service';
 ```
 
-This enum offers error codes so that can easily use at `if` or `switch-case`.
+This enum offers error codes that can easily distinguish the error by using it at `if` or `switch-case`.
+
 
 | VALUE |
 | --- |

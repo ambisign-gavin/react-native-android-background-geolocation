@@ -237,7 +237,7 @@ Options for the location service.
 | NAME | TYPE | REQUIRED | DESCRIPTION | DEFAULT |
 | --- | --- | --- | --- | --- |
 | priority | [PriorityModeEnum](#PriorityModeEnum) | YES | Set the priority of the request. | `PRIORITY_BALANCED_POWER_ACCURACY` |
-| stopOnTerminate | boolean | NO | Whether this service is stopped or not when the app is closed. | `false` |
+| stopOnTerminate | boolean | NO | Whether this service is stopped or not when the app is closed. | `true` |
 | interval | number | YES | The interval that can receive location information, in milliseconds. | 25000 ms |
 | fastestInterval | number | YES | The fastest interval that can receive location information, in milliseconds. | 20000 ms |
 | distanceFilter | number | YES | Set the minimum displacement between location updates in meters. | 100 m |
@@ -246,7 +246,7 @@ Options for the location service.
 
 <a id="LocationInfo">**`LocationInfo`**</a>
 
-**format**
+**Structure**
 ```js
 {
     coords: {
@@ -262,7 +262,7 @@ The location information is the argument be passed to the event listener.
 
 <a id="ErrorInfo">**`ErrorInfo`**</a>
 
-**format**
+**Structure**
 ```js
 {
     code: number,

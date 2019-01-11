@@ -30,8 +30,8 @@ public class LocationService extends Service {
     public static final int PRIORITY_LOW_POWER = 10003;
     public static final int PRIORITY_NO_POWER = 10004;
 
-    public static final long INTERVAL_DEFAULT_VALUE = 20 * 1000; // 20 sec
-    public static final long FASTEST_INTERVAL_DEFAULT_VALUE = 15* 1000; //15 sec
+    public static final long INTERVAL_DEFAULT_VALUE = 25 * 1000; // 25 sec
+    public static final long FASTEST_INTERVAL_DEFAULT_VALUE = 20 * 1000; //10 sec
     public static final float DISTANCE_FILTER_DEFAULT_VALUE = 100; // 100m
 
     public static final String INTERVAL_EXTRA_KEY = "interval";

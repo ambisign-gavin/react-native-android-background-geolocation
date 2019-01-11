@@ -1,20 +1,10 @@
 // @flow
 import { NativeModules, DeviceEventEmitter } from 'react-native';
-import { PriorityModeEnum } from './enum';
 import { type Option, type Unsubscribe } from './type';
 let geolocationService = NativeModules.GeolocationService;
 
 export const Impl = {
     start(option?: Option) {
-        if (option == null) {
-            option = {
-                priority: PriorityModeEnum.PRIORITY_BALANCED_POWER_ACCURACY,
-                stopOnTerminate: false,
-                interval: 25 * 1000,
-                fastestInterval: 20 * 1000,
-                distanceFilter: 100,
-            };
-        }
         geolocationService.start(option);
     },
     stop() {

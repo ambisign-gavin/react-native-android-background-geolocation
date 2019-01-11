@@ -5,16 +5,10 @@ import { PriorityModeEnum } from '../src/enum';
 import type { Option } from '../src/type';
 
 describe('LocationService on Android', () => {
-    it('should start with default options when pass empty options', () => {
+    it('should start with undefined options when not pass any options', () => {
         LocationService.start();
         expect(NativeModules.GeolocationService.start.mock.calls.length).toEqual(1);
-        expect(NativeModules.GeolocationService.start.mock.calls[0][0]).toEqual({
-            priority: PriorityModeEnum.PRIORITY_BALANCED_POWER_ACCURACY,
-            stopOnTerminate: false,
-            interval: 25 * 1000,
-            fastestInterval: 20 * 1000,
-            distanceFilter: 100,
-        });
+        expect(NativeModules.GeolocationService.start.mock.calls[0][0]).toBeUndefined();
     });
 
     it('should start with custom options', () => {

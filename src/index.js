@@ -1,7 +1,7 @@
 // @flow
-import { Impl } from './src/locationServiceImpl';
-import type { Option, Unsubscribe } from './src/type';
-import { PriorityModeEnum, ErrorCodeEnum } from './src/enum';
+import { Impl } from './locationServiceImpl';
+import type { Option, Unsubscribe } from './type';
+import { PriorityModeEnum, ErrorCodeEnum } from './enum';
 
 const LocationService = {
     start(option?: Option) {

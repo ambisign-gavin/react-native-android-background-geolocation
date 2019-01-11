@@ -1,6 +1,6 @@
 // @flow
 import { NativeModules } from 'react-native';
-import LocationService from '..';
+import LocationService from '../../src';
 
 global.console = {
     warn: jest.fn()

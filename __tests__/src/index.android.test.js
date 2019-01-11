@@ -1,8 +1,8 @@
 // @flow
 import { NativeModules, DeviceEventEmitter } from 'react-native';
-import LocationService from '..';
-import { PriorityModeEnum } from '../src/enum';
-import type { Option } from '../src/type';
+import LocationService from '../../src';
+import { PriorityModeEnum } from '../../src/enum';
+import type { Option } from '../../src/type';
 
 describe('LocationService on Android', () => {
     it('should start with undefined options when not pass any options', () => {

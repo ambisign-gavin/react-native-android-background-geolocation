@@ -1,0 +1,49 @@
+{
+  "name": "react-native-android-location-service",
+  "version": "1.0.0",
+  "description": "A react-native geolocation module for Android, which can run in the background even the app is terminated.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test-android": "jest --config config/jest.config.android.js",
+    "test-ios": "jest --config config/jest.config.ios.js",
+    "test": "npm run test-android && npm run test-ios",
+    "clean": "rimraf dist",
+    "build:es5": "babel src -d dist",
+    "build:flow": "flow-copy-source -v src dist",
+    "prepublish": "npm run clean && npm run build:es5 && npm run build:flow"
+  },
+  "keywords": [
+    "react-native",
+    "location",
+    "geolocation",
+    "location-service",
+    "geolocation-service",
+    "location-background",
+    "geolocation-background",
+    "android"
+  ],
+  "author": "Gavin Wang <kuku8990@gmail.com> (https://github.com/ambisign-gavin)",
+  "repository": {
+		"type": "git",
+		"url": "git@github.com:ambisign-gavin/react-native-android-location-service.git"
+	},
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^5.12.0",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-react-native": "^3.6.0",
+    "flow-bin": "^0.78.0",
+    "flow-copy-source": "^2.0.2",
+    "jest": "^23.6.0",
+    "react-native": "^0.57.8",
+    "rimraf": "^2.6.3"
+  }
+}

@@ -1,5 +1,5 @@
 // @flow
-import { Impl } from './src/geolocationServiceImpl';
+import { Impl } from './src/locationServiceImpl';
 import type { Option, Unsubscribe } from './src/type';
 import { PriorityModeEnum, ErrorCodeEnum } from './src/enum';
 

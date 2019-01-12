@@ -1,4 +1,4 @@
-# React Native Android Location Service
+# React Native Android Background Geolocation
 
 A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the foreground and background even the app is terminated.
 
@@ -16,7 +16,7 @@ npm i --save react-native-android-background-geolocation
 
 #### 2. Link the native module
 
-- ##### Automatic
+###### Automatic _(Recommend)_
 
 Use `react-native link` to automatic install android module.
 
@@ -24,7 +24,7 @@ Use `react-native link` to automatic install android module.
 react-native link react-native-android-background-geolocation
 ```
 
-- ##### Manually
+###### Manually
 
 * in `android/app/build.gradle`:
 

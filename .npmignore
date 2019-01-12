@@ -44,6 +44,6 @@ buck-out/
 \.buckd/
 *.keystore
 
-src
-cinfig
-__tests__
+src/
+config/
+__tests__/

@@ -43,14 +43,14 @@ include ':app'
 * in `MainApplication.java`:
 
 ```java
-import com.gavin.RNAndroidGeolocationService.RNAndroidGeolocationServicePackage;
++ import com.gavin.RNAndroidGeolocationService.RNAndroidGeolocationServicePackage;
 ...
     @Override
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             ...
-            new RNAndroidGeolocationServicePackage()
+            + new RNAndroidGeolocationServicePackage()
         );
     }
 ```
@@ -256,7 +256,7 @@ Options for the location service.
 }
 ```
 
-The location information is the argument be passed to the event listener.
+The location information is the argument passed to the event listener.
 
 ---
 
@@ -270,7 +270,7 @@ The location information is the argument be passed to the event listener.
 }
 ```
 
-The error code and an error message are the arguments be passed to the event listener.
+The error code and an error message are the arguments passed to the event listener.
 
 *See more details of description at [errors section](#Errors).*
 

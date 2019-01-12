@@ -2,6 +2,10 @@
 
 A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the background even the app is terminated.
 
+## Example
+
+See [react-native-android-location-service-demo](https://github.com/ambisign-gavin/react-native-android-location-service-demo)
+
 ## Installation
 
 #### 1. Install with npm

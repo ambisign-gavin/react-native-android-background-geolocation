@@ -1,17 +1,17 @@
 # React Native Android Location Service
 
-A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the background even the app is terminated.
+A react-native geolocation module for Android, which uses [Fused Location Provider API](https://developers.google.com/location-context/fused-location-provider/) to get location, and use the Service so that can run in the foreground and background even the app is terminated.
 
 ## Example
 
-See [react-native-android-location-service-demo](https://github.com/ambisign-gavin/react-native-android-location-service-demo)
+See [react-native-android-background-geolocation-demo](https://github.com/ambisign-gavin/react-native-android-background-geolocation-demo)
 
 ## Installation
 
 #### 1. Install with npm
 
 ```sh
-npm i --save react-native-android-location-service
+npm i --save react-native-android-background-geolocation
 ```
 
 #### 2. Link the native module
@@ -21,7 +21,7 @@ npm i --save react-native-android-location-service
 Use `react-native link` to automatic install android module.
 
 ```sh
-react-native link react-native-android-location-service
+react-native link react-native-android-background-geolocation
 ```
 
 - ##### Manually
@@ -30,7 +30,7 @@ react-native link react-native-android-location-service
 
 ```
 dependencies {
-    + compile project(':react-native-android-location-service')
+    + compile project(':react-native-android-background-geolocation')
     ...
 }
 ```
@@ -40,8 +40,8 @@ dependencies {
 ```
 ...
 include ':app'
-+ include ':react-native-android-location-service'
-+ project(':react-native-android-location-service').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-location-service/android')
++ include ':react-native-android-background-geolocation'
++ project(':react-native-android-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-background-geolocation/android')
 ```
 
 * in `MainApplication.java`:
@@ -136,7 +136,7 @@ export default class App extends Component<{}> {
 
 ### Continuously run when the app is terminated
 
-The `react-native-android-location-service` will invoke your App in the background when the app is terminated. But that will not execute any react components, which means that only execute your entry file, usually is `index.js`.
+The `react-native-android-background-geolocation` will invoke your App in the background when the app is terminated. But that will not execute any react components, which means that only execute your entry file, usually is `index.js`.
 
 **index.js**
 
@@ -145,7 +145,7 @@ The `react-native-android-location-service` will invoke your App in the backgrou
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
-import LocationService from 'react-native-android-location-service';
+import LocationService from 'react-native-android-background-geolocation';
 
 LocationService.onLocationChanged(({coords}) => {
     //do something, like update data
@@ -222,7 +222,7 @@ Register an error listener, and return the unsubscribe function.
 <a id="Option">**`Option`**</a>
 
 ```js
-import LocationService, { PriorityModeEnum } from 'react-native-android-location-service';
+import LocationService, { PriorityModeEnum } from 'react-native-android-background-geolocation';
 ...
 LocationService.start({
     priority: PriorityModeEnum.PRIORITY_HIGH_ACCURACY,
@@ -288,7 +288,7 @@ The error code and an error message are the arguments passed to the event listen
 <a id="PriorityModeEnum">**`PriorityModeEnum`**</a>
 
 ```js
-import { PriorityModeEnum } from 'react-native-android-location-service';
+import { PriorityModeEnum } from 'react-native-android-background-geolocation';
 ```
 
 This enum offers the priority of the start option.
@@ -305,7 +305,7 @@ This enum offers the priority of the start option.
 <a id="ErrorCodeEnum">**`ErrorCodeEnum`**</a>
 
 ```js
-import { ErrorCodeEnum } from 'react-native-android-location-service';
+import { ErrorCodeEnum } from 'react-native-android-background-geolocation';
 ```
 This enum offers error codes that can be used at `if` or `switch-case` to distinguish the error.
 

@@ -1,7 +1,7 @@
 {
-  "name": "react-native-android-location-service",
+  "name": "react-native-android-background-geolocation",
   "version": "0.1.0",
-  "description": "A react-native geolocation module for Android, which can run in the background even the app is terminated.",
+  "description": "A react-native geolocation module for Android, which can run in the foreground and background even the app is terminated.",
   "main": "dist/index.js",
   "scripts": {
     "test-android": "jest --config config/jest.config.android.js",
